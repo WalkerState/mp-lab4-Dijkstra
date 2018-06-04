@@ -59,7 +59,13 @@ int main()
 		return -1;
 	}
 
-	graph->ConnectCheck();
+	try {
+		graph->ConnectCheck();
+	}
+
+	catch (...) {
+		return -1;
+	}
 	graph->Print();
 	std::cout << endl;
 
